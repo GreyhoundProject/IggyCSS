@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+$media-max-width: 1100px;
+$media-med-width: 960px;
+$media-min-width: 500px;
+
+
+$primary: rgb(50, 113, 230);
+$secondary: rgb(100, 119, 145);
+$success: rgb(0, 177, 59);
+$danger: rgb(230, 21, 21);
+$warning: rgb(255, 171, 16);
+$info: rgb(56, 175, 190);
+$secondary-base: rgb(100,100,100);
+$black: rgb(65, 65, 75);
+$white: rgb(245, 245, 245);
+$grey1: rgb(240, 240, 240);
+
+$default-radius: 6px;
+
+
+
+
+
+@mixin noselect
+{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin xs-size {
+    @media (max-width: #{$media-min-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin md-size {
+    @media (min-width: #{$media-min-width}) and (max-width: #{$media-max-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin lg-size {
+    @media (min-width: #{$media-max-width}) {
+        @content;
+    }
+}
+
+
+
+
+body, html
+{
+    color: $black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.xs-hide
+{
+    @include xs-size { display: none; }
+}
+
+input, textarea
+{ 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: visible;
+    text-transform: none;
+    outline: none;
+}
+
+
+h1, h2, h3, h4, h5, h6
+{
+    &.left { text-align: left; }
+    &.center { text-align: center; }
+    &.right { text-align: right; }
+    &:first-child { margin-top: -6px;}
+
+    color: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    height: auto;
+    margin: 13px 0 0 0;
+    padding: 0 0 8px 0;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+p
+{
+    &.left { text-align: left; }
+    &.center { text-align: center; }
+    &.right { text-align: right; }
+    &+p { margin-top: 8px; }
+
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.2px;
+}
+
+:disabled
+{
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: saturate(50%);
+}
+
+
+
+
+
+.fill { width: 100%; }
+
+.container
+{
+    padding: 10px;
+}
+
+.btn
+{
+    @include noselect;
+    border-radius: $default-radius;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: 400ms;
+    
+    &:active {
+        top: 1px;
+    }
+
+    &.primary,
+    &.secondary,
+    &.success,
+    &.danger,
+    &.warning,
+    &.info,
+    &.black
+    {
+        color: $white;
+    }
+
+    &.outline-primary,
+    &.outline-secondary,
+    &.outline-success,
+    &.outline-danger,
+    &.outline-warning,
+    &.outline-info,
+    &.outline-black
+    {
+        background-color: transparent;
+
+        &:hover
+        {
+            color: white;
+        }
+    }
+
+    &.outline-warning,
+    &.outline-white
+    {
+        background-color: transparent;
+    }
+
+
+
+
+    &.primary
+    {
+        background-color: $primary;
+        border-color: $primary;
+    
+        &:hover {
+            background-color: darken($primary, 10%);
+            border-color: darken($primary, 10%);
+        }
+    }
+
+    &.secondary
+    {
+        background-color: $secondary;
+        border-color: $secondary;
+    
+        &:hover {
+            background-color: darken($secondary, 10%);
+            border-color: darken($secondary, 10%);
+        }
+    }
+    
+    &.success
+    {
+        background-color: $success;
+        border-color: $success;
+    
+        &:hover {
+            background-color: darken($success, 10%);
+            border-color: darken($success, 10%);
+        }
+    }
+    
+    &.danger
+    {
+        background-color: $danger;
+        border-color: $danger;
+    
+        background: repeating-linear-gradient( 45deg,
+            darken($danger, 7%),
+            darken($danger, 7%) 10px,
+            $danger 10px,
+            $danger 20px
+        );
+    
+        &:hover {
+            background-color: darken($danger, 11%);
+            border-color: darken($danger, 11%);
+
+            background: repeating-linear-gradient( 45deg,
+                darken($danger, 9%),
+                darken($danger, 9%) 10px,
+                darken($danger, 3%) 10px,
+                darken($danger, 3%) 20px
+            );
+        }
+    }
+    
+    &.warning
+    {
+        background-color: $warning;
+        border-color: $warning;;
+
+        background: repeating-linear-gradient( 45deg,
+            darken($warning, 7%),
+            darken($warning, 7%) 10px,
+            $warning 10px,
+            $warning 20px
+        );
+    
+        &:hover {
+            background-color: darken($warning, 11%);
+            border-color: darken($warning, 11%);
+
+            background: repeating-linear-gradient( 45deg,
+                darken($warning, 9%),
+                darken($warning, 9%) 10px,
+                darken($warning, 3%) 10px,
+                darken($warning, 3%) 20px
+            );
+        }
+    }
+    
+    &.info
+    {
+        background-color: $info;
+        border-color: $info;
+    
+        &:hover {
+            background-color: darken($info, 10%);
+            border-color: darken($info, 10%);
+        }
+    }
+    
+    &.white
+    {
+        background-color: $grey1;
+        border-color: $white;
+        color: lighten($black, 30%);
+    
+        &:hover {
+            background-color: white;
+            border-color: white;
+        }
+    }
+    
+    &.black
+    {
+        background-color: $black;
+        border-color: $black;
+    
+        &:hover {
+            background-color: darken($black, 10%);
+            border-color: darken($black, 10%);
+        }
+    }
+    
+    &.outline-primary
+    {
+        border-color: $primary;
+        color: $primary;
+    
+        &:hover {
+            background-color: $primary;
+        }
+    }
+    
+    &.outline-secondary
+    {
+        border-color: $secondary;
+        color: $secondary;
+    
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+    
+    &.outline-success
+    {
+        border-color: $success;
+        color: $success;
+    
+        &:hover {
+            background-color: $success;
+        }
+    }
+    
+    &.outline-danger
+    {
+        border-color: $danger;
+        color: $danger;
+    
+        &:hover {
+            background-color: darken($danger, 11%);
+            border-color: darken($danger, 11%);
+
+            background: repeating-linear-gradient( 45deg,
+                darken($danger, 9%),
+                darken($danger, 9%) 10px,
+                darken($danger, 3%) 10px,
+                darken($danger, 3%) 20px
+            );
+        }
+    }
+    
+    &.outline-warning
+    {
+        border-color: $warning;
+        color: $warning;
+    
+        &:hover {
+            background-color: darken($warning, 11%);
+            border-color: darken($warning, 4%);
+
+            background: repeating-linear-gradient( 45deg,
+                darken($warning, 9%),
+                darken($warning, 9%) 10px,
+                darken($warning, 3%) 10px,
+                darken($warning, 3%) 20px
+            );
+        }
+    }
+    
+    &.outline-info
+    {
+        border-color: $info;
+        color: $info;
+    
+        &:hover {
+            background-color: $info;
+        }
+    }
+    
+    &.outline-white
+    {
+        border-color: darken($white, 10%);
+        color: darken($white, 40%);
+    
+        &:hover {
+            background-color: darken($white, 12%);
+            border-color: darken($white, 12%);
+            color: $white;
+        }
+    }
+    
+    &.outline-black
+    {
+        border-color: $black;
+        color: $black;
+    
+        &:hover {
+            background-color: $black;
+            color: white;
+        }
+    }
+}
+
+
+.btn-group-h
+{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+
+    .btn:not(:first-child):not(:last-child)
+    {
+        border-radius: 0;
+    }
+
+    .btn:first-child
+    {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right-width: 0;
+    }
+
+    .btn:last-child
+    {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left-width: 0;
+    }
+}
+
+
+.btn-group-v
+{
+    display: inline-flex;
+    flex-direction: column;
+
+    .btn
+    {
+        display: inline-block;
+        margin-bottom: -1px;
+    }
+
+    .btn:not(:first-child):not(:last-child)
+    {
+        border-radius: 0;
+    }
+
+    .btn:first-child
+    {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-width: 0;
+    }
+
+    .btn:last-child
+    {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top-width: 0;
+    }
+}
+
+
+
+
+.panel
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: $default-radius + 5;
+    box-sizing: border-box;
+    padding: 8px;
+    background-color: $grey1;
+    margin-bottom: 7px;
+}
+
+
+
+
+
+
+.group
+{
+    display: inline-flex;
+    vertical-align: top;
+    margin-bottom: 10px;
+
+    &:focus-within
+    {
+        .text-group-pre
+        {
+            border-color: $primary;
+            color: $white;
+            background-color: $primary;
+        }   
+    }
+
+    .group-pre
+    {
+        display: inline-block;
+        border-color: darken($white, 20%);
+        border-width: 1px;
+        border-style: solid;
+        background-color: transparent;
+        border-radius: 5px 0 0 5px;
+        color: darken($white, 40%);
+        flex-grow: 0;
+        margin: 0 -1px 0 0;
+        padding: 8px;
+        transition: 0.5s;
+        white-space: nowrap;
+    }
+
+    .text
+    {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        flex-grow: 10;
+    }
+
+    .checkbox
+    {
+        display: inline-block;
+        height: auto;
+        align-items: stretch;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+
+
+.text
+{
+    border-color: darken($white, 20%);
+    border-radius: $default-radius;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: darken($white, 40%);
+    cursor: text;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+    outline: none;
+    padding: 10px;
+    position: relative;
+    resize: none;
+    text-align: left;
+    transition: 400ms;
+    vertical-align: top;
+
+    &input
+    {
+        white-space: nowrap;
+    }
+
+    &textarea
+    {
+        white-space: wrap;
+    }
+
+    &:hover, &:focus
+    {
+        -webkit-box-shadow: inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+        -moz-box-shadow:    inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+        box-shadow:         inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+    }
+    
+    &:focus
+    {
+        border-color: $primary;
+        color: $primary;
+    }
+}
+
+textarea.text
+{
+    border-color: darken($white, 20%);
+    border-radius: $default-radius;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: darken($white, 40%);
+    cursor: text;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+    outline: none;
+    padding: 10px;
+    position: relative;
+    text-align: left;
+    transition: 400ms;
+    width: 100%;
+    white-space: wrap;
+    resize: none;
+
+    &:hover, &:focus
+    {
+        -webkit-box-shadow: inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+        -moz-box-shadow:    inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+        box-shadow:         inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+    }
+    
+    &:focus
+    {
+        border-color: $primary;
+        color: $primary;
+    }
+}
+
+.progress
+{
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: $default-radius; 
+    margin: 5px 0;
+    overflow: hidden;
+    width: 100%;
+    cursor: wait;
+    
+    .progress-bar
+    {
+        -webkit-box-shadow: inset 0px -7px 0px 1px rgba(0,0,0,0.04);
+        -moz-box-shadow:    inset 0px -7px 0px 1px rgba(0,0,0,0.04);
+        box-shadow:         inset 0px -7px 0px 1px rgba(0,0,0,0.04);
+        background-color: $primary;
+        height: 18px;
+
+        background: repeating-linear-gradient(
+            45deg,
+            lighten($primary, 5%),
+            lighten($primary, 5%) 10px,
+            $primary 10px,
+            $primary 20px
+        );
+
+        transition: width 2s;
+        transition-timing-function: ease;
+        
+        &.success
+        {
+            background-color: $success;
+            cursor: default;
+            background: repeating-linear-gradient(
+                45deg,
+                lighten($success, 3%),
+                lighten($success, 3%) 10px,
+                $success 10px,
+                $success 20px
+            );
+        }
+        &.warning
+        {
+            background-color: $warning;
+            cursor: default;
+            background: repeating-linear-gradient(
+                45deg,
+                $warning,
+                $warning 10px,
+                darken($warning, 6%) 10px,
+                darken($warning, 6%) 20px
+            );
+        }
+        &.danger
+        {
+            background-color: $danger;
+            cursor: default;
+            background: repeating-linear-gradient(
+                45deg,
+                lighten($danger, 10%),
+                lighten($danger, 10%) 10px,
+                $danger 10px,
+                $danger 20px
+            );
+        }
+    }
+}
+
+.checkbox
+{
+    background: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: darken($white, 20%);
+    border-radius: $default-radius;
+    box-sizing: border-box;
+    display: block;
+    font-size: 27px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    width: 42px;
+
+    &:hover, &:focus
+    {
+        -webkit-box-shadow: inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+        -moz-box-shadow:    inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+        box-shadow:         inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+    }
+
+    &:checked
+    {
+        position: relative;
+        color: $white;
+        background-color: $primary;
+        border-color: $primary;
+        
+        &::after {
+            content: "✓";
+            display: block;
+            position: absolute;
+            font-weight: 800;
+            height: auto;
+            left: 50%;
+            margin: 0;
+            padding: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+        }
+    }
+}
+
