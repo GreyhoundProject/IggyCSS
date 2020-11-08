@@ -1,2 +1,2 @@
-# IggyCSS
+# iggy.css
 Lightweight CSS Framework
