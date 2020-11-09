@@ -701,7 +701,7 @@ textarea.text
     margin: 0;
     width: 42px;
 
-    &:hover, &:focus
+    &:hover, &:checked
     {
         -webkit-box-shadow: inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
         -moz-box-shadow:    inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
@@ -731,3 +731,58 @@ textarea.text
     }
 }
 
+
+
+.alert
+{
+    @include noselect;
+    border-radius: $default-radius;
+    border-width: 0;
+    box-sizing: border-box;
+    color: $white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 0 6px 0;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: 400ms;
+
+    &.primary { background-color: $primary; }
+    &.secondary { background-color: $secondary; }
+    &.success { background-color: $success; }
+    &.info { background-color: $info; }
+    &.white { background-color: $grey1; color: lighten($black, 30%); }
+    &.black { background-color: $black; }
+    
+    &.danger
+    {
+        background-color: $danger;
+        background: repeating-linear-gradient( 45deg,
+            darken($danger, 2%),
+            darken($danger, 2%) 10px,
+            $danger 10px,
+            $danger 20px
+        );
+    }
+
+    &.warning
+    {
+        background-color: $warning;
+        border-color: $warning;;
+
+        background: repeating-linear-gradient( 45deg,
+            darken($warning, 7%),
+            darken($warning, 7%) 10px,
+            $warning 10px,
+            $warning 20px
+        );
+    }
+    
+}

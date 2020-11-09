@@ -551,7 +551,7 @@ textarea.text:focus {
   width: 42px;
 }
 
-.checkbox:hover, .checkbox:focus {
+.checkbox:hover, .checkbox:checked {
   -webkit-box-shadow: inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
   box-shadow: inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
 }
@@ -576,5 +576,67 @@ textarea.text:focus {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: auto;
+}
+
+.alert {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 6px;
+  border-width: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0 0 6px 0;
+  outline: none;
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.alert.primary {
+  background-color: #3271e6;
+}
+
+.alert.secondary {
+  background-color: #647791;
+}
+
+.alert.success {
+  background-color: #00b13b;
+}
+
+.alert.info {
+  background-color: #38afbe;
+}
+
+.alert.white {
+  background-color: #f0f0f0;
+  color: #8b8b9a;
+}
+
+.alert.black {
+  background-color: #41414b;
+}
+
+.alert.danger {
+  background-color: #e61515;
+  background: repeating-linear-gradient(45deg, #dd1414, #dd1414 10px, #e61515 10px, #e61515 20px);
+}
+
+.alert.warning {
+  background-color: #ffab10;
+  border-color: #ffab10;
+  background: repeating-linear-gradient(45deg, #eb9900, #eb9900 10px, #ffab10 10px, #ffab10 20px);
 }
 /*# sourceMappingURL=iggy.css.map */
