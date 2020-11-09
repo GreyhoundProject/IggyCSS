@@ -746,43 +746,59 @@ textarea.text
     line-height: 16px;
     margin: 0 0 6px 0;
     outline: none;
-    padding: 10px 20px;
+    padding: 10px;
     position: relative;
-    text-align: center;
     width: 100%;
     white-space: nowrap;
     vertical-align: middle;
-    transition: 400ms;
 
-    &.primary { background-color: $primary; }
-    &.secondary { background-color: $secondary; }
-    &.success { background-color: $success; }
-    &.info { background-color: $info; }
-    &.white { background-color: $grey1; color: lighten($black, 30%); }
-    &.black { background-color: $black; }
+    &.primary
+    {
+        background-color: lighten($primary, 25%);
+        color: darken($primary, 20%);
+    }
+
+    &.secondary
+    {
+        background-color: lighten($secondary, 30%);
+        color: darken($secondary, 20%);
+    }
+
+    &.success
+    {
+        background-color: lighten( desaturate($success, 30%), 30%);
+        color: darken($success, 15%);
+    }
     
     &.danger
     {
         background-color: $danger;
-        background: repeating-linear-gradient( 45deg,
-            darken($danger, 2%),
-            darken($danger, 2%) 10px,
-            $danger 10px,
-            $danger 20px
-        );
+        color: darken($danger, 30%);
     }
 
     &.warning
     {
         background-color: $warning;
-        border-color: $warning;;
-
-        background: repeating-linear-gradient( 45deg,
-            darken($warning, 7%),
-            darken($warning, 7%) 10px,
-            $warning 10px,
-            $warning 20px
-        );
+        color: darken($warning, 25%);
     }
+
+    &.info
+    {
+        background-color: lighten($info, 20%);
+        color: darken($info, 20%);
+    }
+    
+    &.white
+    {
+        background-color: $grey1; color: lighten($black, 30%);
+        color: darken($white, 40%);
+    }
+    
+    &.black
+    {
+        background-color: darken($white, 40%);
+        color: lighten($black, 5%);
+    }
+    
     
 }

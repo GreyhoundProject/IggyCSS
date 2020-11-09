@@ -594,49 +594,51 @@ textarea.text:focus {
   line-height: 16px;
   margin: 0 0 6px 0;
   outline: none;
-  padding: 10px 20px;
+  padding: 10px;
   position: relative;
-  text-align: center;
   width: 100%;
   white-space: nowrap;
   vertical-align: middle;
-  -webkit-transition: 400ms;
-  transition: 400ms;
 }
 
 .alert.primary {
-  background-color: #3271e6;
+  background-color: #a4c0f4;
+  color: #13449f;
 }
 
 .alert.secondary {
-  background-color: #647791;
+  background-color: #bdc5d1;
+  color: #3a4555;
 }
 
 .alert.success {
-  background-color: #00b13b;
+  background-color: #66e490;
+  color: #006522;
+}
+
+.alert.danger {
+  background-color: #e61515;
+  color: #5a0808;
+}
+
+.alert.warning {
+  background-color: #ffab10;
+  color: #905d00;
 }
 
 .alert.info {
-  background-color: #38afbe;
+  background-color: #82d0da;
+  color: #21666f;
 }
 
 .alert.white {
   background-color: #f0f0f0;
   color: #8b8b9a;
+  color: #8f8f8f;
 }
 
 .alert.black {
-  background-color: #41414b;
-}
-
-.alert.danger {
-  background-color: #e61515;
-  background: repeating-linear-gradient(45deg, #dd1414, #dd1414 10px, #e61515 10px, #e61515 20px);
-}
-
-.alert.warning {
-  background-color: #ffab10;
-  border-color: #ffab10;
-  background: repeating-linear-gradient(45deg, #eb9900, #eb9900 10px, #ffab10 10px, #ffab10 20px);
+  background-color: #8f8f8f;
+  color: #4d4d59;
 }
 /*# sourceMappingURL=iggy.css.map */
