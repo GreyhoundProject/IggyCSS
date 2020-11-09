@@ -612,17 +612,17 @@ textarea.text:focus {
 }
 
 .alert.success {
-  background-color: #66e490;
+  background-color: #b1e5c3;
   color: #006522;
 }
 
 .alert.danger {
-  background-color: #e61515;
-  color: #5a0808;
+  background-color: #f7acac;
+  color: #b71111;
 }
 
 .alert.warning {
-  background-color: #ffab10;
+  background-color: #ffd890;
   color: #905d00;
 }
 
@@ -633,7 +633,6 @@ textarea.text:focus {
 
 .alert.white {
   background-color: #f0f0f0;
-  color: #8b8b9a;
   color: #8f8f8f;
 }
 

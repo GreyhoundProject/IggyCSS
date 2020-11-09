@@ -766,19 +766,19 @@ textarea.text
 
     &.success
     {
-        background-color: lighten( desaturate($success, 30%), 30%);
+        background-color: lighten( desaturate($success, 50%), 45%);
         color: darken($success, 15%);
     }
     
     &.danger
     {
-        background-color: $danger;
-        color: darken($danger, 30%);
+        background-color: lighten($danger, 33%);
+        color: darken($danger, 10%);
     }
 
     &.warning
     {
-        background-color: $warning;
+        background-color: lighten($warning, 25%);
         color: darken($warning, 25%);
     }
 
@@ -790,7 +790,7 @@ textarea.text
     
     &.white
     {
-        background-color: $grey1; color: lighten($black, 30%);
+        background-color: $grey1;
         color: darken($white, 40%);
     }
     
