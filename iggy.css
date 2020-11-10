@@ -466,6 +466,7 @@ nav ul li:hover {
 
 .btn-group-h .btn:not(:first-child):not(:last-child) {
   border-radius: 0;
+  margin-right: -1px;
 }
 
 .btn-group-h .btn:first-child {
