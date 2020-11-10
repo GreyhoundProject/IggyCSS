@@ -77,6 +77,81 @@ p + p {
   margin-top: 8px;
 }
 
+p a, p a:link, p a:hover, p a:focus, p a:visited {
+  font-weight: 600;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+a, a:link, a:hover, a:focus, a:visited {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.container nav {
+  border-radius: 6px;
+}
+
+nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #41414b;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 10px;
+  min-height: 47px;
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+}
+
+nav .title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+nav ul {
+  font-size: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul a, nav ul a:link, nav ul a:hover, nav ul a:focus, nav ul a:visited, nav ul a:active {
+  font-weight: normal;
+}
+
+nav ul li {
+  background-color: #41414b;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 0 0 8px;
+  padding: 3px 6px;
+  height: 100%;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: #595966;
+}
+
 :disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -86,6 +161,22 @@ p + p {
 
 .fill {
   width: 100%;
+}
+
+.left {
+  text-align: left;
+}
+
+.center, .centre {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.justify {
+  text-align: justify;
 }
 
 .container {
@@ -113,6 +204,11 @@ p + p {
   width: 100%;
   white-space: nowrap;
   vertical-align: middle;
+}
+
+.alert a, .alert a:link, .alert a:hover, .alert a:focus, .alert a:visited {
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .alert.primary {
@@ -424,7 +520,7 @@ p + p {
           box-sizing: border-box;
   padding: 8px;
   background-color: #f0f0f0;
-  margin-bottom: 7px;
+  margin-bottom: 11px;
 }
 
 .group {

@@ -8,11 +8,32 @@
 </head>
 <body>
 
+    <nav>
+        <span class="title">iggy.css</span>
+        <ul>
+            <li><a href="#alerts">Alerts</a></li>
+            <a href="#typography"><li>Typography</li></a>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#progress-bar">Progress Bar</a></li>
+            <li><a href="#button-groups">Button Groups</a></li>
+            <li><a href="#input">Input</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
 
-        <div class="panel">
+        <div id="alerts">
+            <div class="alert primary">This is a primary alert!</div>
+            <div class="alert secondary">This is a secondary alert!</div>
+            <div class="alert success">This is a success alert, with <a href="#">a link!</a></div>
+            <div class="alert danger">This is a danger alert!</div>
+            <div class="alert warning center">This is a warning alert - but centred!</div>
+            <div class="alert info right">This is a info alert - and it's on the right!</div>
+        </div>
+
+        <div class="panel" id="typography">
             <h1>Typography</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate nunc sit amet urna varius blandit. Cras ac turpis in turpis rutrum feugiat. Donec dolor magna, congue vehicula dapibus ac, faucibus eu tellus. Pellentesque a fermentum metus, nec maximus sapien. Aenean ut magna ac nunc interdum convallis. Vestibulum eu porta turpis, a tincidunt arcu. Donec ac tincidunt elit. Nulla rutrum odio diam, et volutpat lorem vestibulum in. Pellentesque eu placerat arcu, id rutrum quam.</p>
+            <p>Lorem ipsum dolor sit amet, <a hred="#">consectetur adipiscing elit</a>. Mauris vulputate nunc sit amet urna varius blandit. Cras ac turpis in turpis rutrum feugiat. Donec dolor magna, congue vehicula dapibus ac, faucibus eu tellus. Pellentesque a fermentum metus, nec maximus sapien. Aenean ut magna ac nunc interdum convallis. Vestibulum eu porta turpis, a tincidunt arcu. Donec ac tincidunt elit. Nulla rutrum odio diam, et volutpat lorem vestibulum in. Pellentesque eu placerat arcu, id rutrum quam.</p>
             <p>Aenean malesuada lobortis neque. Duis fringilla at urna a mattis. Curabitur eu augue nec massa pretium cursus. Ut tellus nunc, tincidunt in lorem vel, condimentum iaculis odio. Quisque nec nunc vitae mi volutpat viverra. Nulla facilisi. Fusce hendrerit laoreet nisl ut lacinia. Sed id ullamcorper orci. Vivamus mollis felis vitae nulla scelerisque pretium. Duis egestas turpis dolor, id eleifend dolor molestie ac.</p>
             <h2>This is a H2 Heading</h2>
             <p>This is some text</p>
@@ -24,7 +45,7 @@
         </div>
 
         
-        <div class="panel">
+        <div class="panel" id="buttons">
             <h2>Buttons</h2>
             <button type="button" class="btn primary">Primary</button>
             <button type="button" class="btn secondary">Secondary</button>
@@ -34,9 +55,7 @@
             <button type="button" class="btn info">Info</button>
             <button type="button" class="btn white">White</button>
             <button type="button" class="btn black">Black</button>
-        </div>
-        
-        <div class="panel">
+
             <h2>Outline Buttons</h2>
             <button type="button" class="btn outline-primary">Primary</button>
             <button type="button" class="btn outline-secondary">Secondary</button>
@@ -48,7 +67,7 @@
             <button type="button" class="btn outline-black">Black</button>
         </div>
         
-        <div class="panel">
+        <div class="panel" id="progress-bar">
             <h2>Progress Bar</h2>
             <div class="progress">
                 <div class="progress-bar" style="width: 40%"></div>
@@ -64,16 +83,13 @@
             </div>
         </div>
 
-        <div class="panel">
+        <div class="panel" id="button-groups">
             <h2>Horizontal Button Group</h2>
             <div class="btn-group-h">
                 <button type="button" class="btn outline-primary">One</button>
                 <button type="button" class="btn outline-primary">Two</button>
                 <button type="button" class="btn outline-primary">Third</button>
             </div>
-        </div>
-        
-        <div class="panel">
             
             <h2>Vertical Buttons</h2>
             <div class="btn-group-v">
@@ -98,7 +114,7 @@
             </div>
         </div>
         
-        <div class="panel">
+        <div class="panel" id="input">
             <h2>Textbox</h2>
             <input type="text" class="text" value="Textbox">
             <div class="group">
@@ -146,14 +162,7 @@
             </div>
         </div>
 
-        <div class="alert primary">This is a primary alert!</div>
-        <div class="alert secondary">This is a secondary alert!</div>
-        <div class="alert success">This is a success alert!</div>
-        <div class="alert danger">This is a danger alert!</div>
-        <div class="alert warning">This is a warning alert!</div>
-        <div class="alert info">This is a info alert!</div>
-        <div class="alert white">This is a white alert!</div>
-        <div class="alert black">This is a black alert!</div>
+        
         
         
 

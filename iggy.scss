@@ -12,7 +12,6 @@ $success: rgb(0, 177, 59);
 $danger: rgb(230, 21, 21);
 $warning: rgb(255, 171, 16);
 $info: rgb(56, 175, 190);
-$secondary-base: rgb(100,100,100);
 $black: rgb(65, 65, 75);
 $white: rgb(245, 245, 245);
 $grey1: rgb(240, 240, 240);
@@ -108,6 +107,87 @@ p
     margin: 0;
     padding: 0;
     letter-spacing: -0.2px;
+
+    a, a:link, a:hover, a:focus, a:visited
+    {
+        font-weight: 600;
+    }
+    
+    a:hover
+    {
+        text-decoration: underline;
+    }
+
+}
+
+a, a:link, a:hover, a:focus, a:visited
+{
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+    
+
+.container
+{
+    nav
+    {
+        border-radius: $default-radius;
+    }
+}
+
+nav
+{
+    align-items: center;
+    background: $black;
+    box-sizing: border-box;
+    color: white;
+    display: inline-flex;
+    margin-bottom: 10px;
+    min-height: 47px;
+    padding: 0 10px;
+    position: relative;
+    width: 100%;
+
+    .title
+    {
+        font-size: 20px;
+        font-weight: 600;
+        margin-right: 20px;
+    }
+
+    ul
+    {
+        font-size: 15px;
+        box-sizing: border-box;
+        display: inline-flex;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        a, a:link, a:hover, a:focus, a:visited, a:active
+        {
+            font-weight: normal;
+        }
+
+        li
+        {
+            background-color: $black;
+            border-radius: $default-radius;
+            box-sizing: border-box;
+            margin: 0 0 0 8px;
+            padding: 3px 6px;
+            height: 100%;
+            text-decoration: none;
+            list-style: none;
+            cursor: pointer;
+
+            &:hover
+            {
+                background-color: lighten($black, 10%);
+            }
+        }
+    }
 }
 
 :disabled
@@ -118,6 +198,10 @@ p
 }
 
 .fill { width: 100%; }
+.left { text-align: left; }
+.center, .centre { text-align: center; }
+.right { text-align: right; }
+.justify { text-align: justify; }
 
 
 
@@ -144,6 +228,12 @@ p
     width: 100%;
     white-space: nowrap;
     vertical-align: middle;
+
+    a, a:link, a:hover, a:focus, a:visited
+    {
+        font-weight: 600;
+        text-decoration: underline;
+    }
 
     &.primary
     {
@@ -538,7 +628,7 @@ p
     box-sizing: border-box;
     padding: 8px;
     background-color: $grey1;
-    margin-bottom: 7px;
+    margin-bottom: 11px;
 }
 
 .group
