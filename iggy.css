@@ -435,7 +435,7 @@ p + p {
   margin-bottom: 10px;
 }
 
-.group:focus-within .text-group-pre {
+.group:focus-within .group-pre {
   border-color: #3271e6;
   color: whitesmoke;
   background-color: #3271e6;
