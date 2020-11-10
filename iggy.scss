@@ -117,15 +117,83 @@ p
     filter: saturate(50%);
 }
 
-
-
-
-
 .fill { width: 100%; }
+
+
 
 .container
 {
     padding: 10px;
+}
+
+.alert
+{
+    @include noselect;
+    border-radius: $default-radius;
+    border-width: 0;
+    box-sizing: border-box;
+    color: $white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 0 6px 0;
+    outline: none;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    &.primary
+    {
+        background-color: lighten($primary, 25%);
+        color: darken($primary, 20%);
+    }
+
+    &.secondary
+    {
+        background-color: lighten($secondary, 30%);
+        color: darken($secondary, 20%);
+    }
+
+    &.success
+    {
+        background-color: lighten( desaturate($success, 50%), 45%);
+        color: darken($success, 15%);
+    }
+    
+    &.danger
+    {
+        background-color: lighten($danger, 33%);
+        color: darken($danger, 10%);
+    }
+
+    &.warning
+    {
+        background-color: lighten($warning, 25%);
+        color: darken($warning, 25%);
+    }
+
+    &.info
+    {
+        background-color: lighten($info, 20%);
+        color: darken($info, 20%);
+    }
+    
+    &.white
+    {
+        background-color: $grey1;
+        color: darken($white, 40%);
+    }
+    
+    &.black
+    {
+        background-color: darken($white, 40%);
+        color: lighten($black, 5%);
+    }
+    
+    
 }
 
 .btn
@@ -404,7 +472,6 @@ p
     }
 }
 
-
 .btn-group-h
 {
     display: -webkit-inline-box;
@@ -430,7 +497,6 @@ p
         border-left-width: 0;
     }
 }
-
 
 .btn-group-v
 {
@@ -463,9 +529,6 @@ p
     }
 }
 
-
-
-
 .panel
 {
     border-width: 1px;
@@ -477,11 +540,6 @@ p
     background-color: $grey1;
     margin-bottom: 7px;
 }
-
-
-
-
-
 
 .group
 {
@@ -531,8 +589,6 @@ p
         border-bottom-left-radius: 0;
     }
 }
-
-
 
 .text
 {
@@ -732,73 +788,52 @@ textarea.text
 }
 
 
-
-.alert
+.radio
 {
-    @include noselect;
-    border-radius: $default-radius;
-    border-width: 0;
+    border: none;
     box-sizing: border-box;
-    color: $white;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 16px;
-    margin: 0 0 6px 0;
-    outline: none;
-    padding: 10px;
-    position: relative;
-    width: 100%;
-    white-space: nowrap;
+    display: inline-block;
+    padding: 0;
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
 
-    &.primary
+    &:hover, &:checked
     {
-        background-color: lighten($primary, 25%);
-        color: darken($primary, 20%);
+        &::after
+        {
+            -webkit-box-shadow: inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+            -moz-box-shadow:    inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+            box-shadow:         inset 10px 10px 0px -6px rgba(0, 0, 0, 0.08);
+        }
+    }
+    
+    &::after
+    {
+        content: "";
+        border-width: 1px;
+        border-style: solid;
+        border-color: darken($white, 20%);
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: white;
+        border-radius: 50%;
     }
 
-    &.secondary
-    {
-        background-color: lighten($secondary, 30%);
-        color: darken($secondary, 20%);
+    &:checked
+    {        
+        &::after
+        {
+            color: $white;
+            background-color: $primary;
+            border-color: darken($primary, 7%);
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: $primary;
+        }
     }
-
-    &.success
-    {
-        background-color: lighten( desaturate($success, 50%), 45%);
-        color: darken($success, 15%);
-    }
-    
-    &.danger
-    {
-        background-color: lighten($danger, 33%);
-        color: darken($danger, 10%);
-    }
-
-    &.warning
-    {
-        background-color: lighten($warning, 25%);
-        color: darken($warning, 25%);
-    }
-
-    &.info
-    {
-        background-color: lighten($info, 20%);
-        color: darken($info, 20%);
-    }
-    
-    &.white
-    {
-        background-color: $grey1;
-        color: darken($white, 40%);
-    }
-    
-    &.black
-    {
-        background-color: darken($white, 40%);
-        color: lighten($black, 5%);
-    }
-    
-    
 }
